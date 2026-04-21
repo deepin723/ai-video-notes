@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://ai-video-notes-production.up.railway.app/api/:path*"
+    }
+  ]
+}
