@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
+const isEmbed = new URLSearchParams(window.location.search).has('embed')
 import UploadZone from './components/UploadZone.vue'
 import StepProgress from './components/StepProgress.vue'
 import NoteResult from './components/NoteResult.vue'
@@ -101,7 +103,7 @@ function reset() {
 <template>
   <div class="app">
     <!-- Header -->
-    <header class="header">
+    <header v-if="!isEmbed" class="header">
       <div class="header-inner">
         <div class="logo">🎬</div>
         <div>
